@@ -166,3 +166,12 @@ characterArray.find(function(characterArray){
         console.log(aragorn.describe());
     }
 });
+
+//Using the .filter() function, create a new array from characters that ONLY contains characters of the race Hobbit.//
+
+const onlyHobbit = characterArray.filter(function(characterArray) {
+        return characterArray.race === 'Hobbit';
+    }
+);
+
+console.log(onlyHobbit);
