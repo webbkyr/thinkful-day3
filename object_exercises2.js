@@ -23,10 +23,43 @@
 //     console.log(`${key} ${obj[key]}`);
 // }
 
-const myMeals = {
-    meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
-}
-console.log(Object.keys(myMeals).map(key => myMeals[key][3]));
+// const myMeals = {
+//     meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
+// }
+// console.log(Object.keys(myMeals).map(key => myMeals[key][3]));
 
-//simpler way to do it//
-console.log(myMeals.meals[3]);
+// //simpler way to do it//
+// console.log(myMeals.meals[3]);
+
+
+let peopleArray = [
+    person1 = {
+        name: 'Ryan',
+        job_title: 'Student'
+    },
+    person2 = {
+        name: 'Kayla',
+        job_title: 'Student'
+    },
+    person3 = {
+        name: 'Bob',
+        job_title: 'finance'
+    }, 
+    person4 = {
+        name: 'Liz',
+        job_title: 'doctor'
+    }
+]
+
+console.log(peopleArray[0].name);
+
+for(let i=0; i<peopleArray.length; i++){
+  console.log(`${peopleArray[i].name} ${peopleArray[i].job_title}`);
+}
+
+// person5 = {
+//     name: 'michael',
+//     job_title: 'programmer'
+// }
+
+// console.log(person5.name);
