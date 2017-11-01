@@ -161,17 +161,22 @@ const characterArray = [
 ];
 
 
-characterArray.find(function(characterArray){
-    if(characterArray.nickname === 'aragorn'){
-        console.log(aragorn.describe());
-    }
-});
+// characterArray.find(function(characterArray){
+//     if(characterArray.nickname === 'aragorn'){
+//         console.log(aragorn.describe());
+//     }
+// });
 
 //Using the .filter() function, create a new array from characters that ONLY contains characters of the race Hobbit.//
 
-const onlyHobbit = characterArray.filter(function(characterArray) {
-        return characterArray.race === 'Hobbit';
-    }
-);
+// const onlyHobbit = characterArray.filter(function(characterArray) {
+//         return characterArray.race === 'Hobbit';
+//     }
+// );
 
-console.log(onlyHobbit);
+// console.log(onlyHobbit);
+
+const highAttacks = characterArray.filter(function(characterArray){
+    return characterArray.attack > 5;
+});
+console.log(highAttacks);
