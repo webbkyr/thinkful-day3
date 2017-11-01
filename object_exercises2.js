@@ -11,14 +11,19 @@
 
 // console.log(loaf.hydration());
 
-const obj = {
-    foo: 'fee',
-    bar: 'boo',
-    fum: 'fi',
-    quux: 'dog',
-    spam: 'email'
-}
+// const obj = {
+//     foo: 'fee',
+//     bar: 'boo',
+//     fum: 'fi',
+//     quux: 'dog',
+//     spam: 'email'
+// }
 
-for (key in obj){
-    console.log(`${key} ${obj[key]}`);
+// for (key in obj){
+//     console.log(`${key} ${obj[key]}`);
+// }
+
+const myMeals = {
+    meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
 }
+console.log(Object.keys(myMeals).map(key => myMeals[key][3]));
