@@ -56,7 +56,6 @@ console.log(peopleArray[0].name);
 for(let i=0; i<peopleArray.length; i++){
   console.log(`${peopleArray[i].name} ${peopleArray[i].job_title}`);
 }
-<<<<<<< HEAD
 //
 
 console.log(Object.keys(myMeals).map(key => myMeals[key][3]));
@@ -64,12 +63,3 @@ console.log(Object.keys(myMeals).map(key => myMeals[key][3]));
 console.log(myMeals.meals[3])
 
 
-=======
-
-// person5 = {
-//     name: 'michael',
-//     job_title: 'programmer'
-// }
-
-// console.log(person5.name);
->>>>>>> 5554240ef9d186bee0e65734d907b15d37d243ba
