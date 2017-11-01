@@ -27,3 +27,6 @@ const myMeals = {
     meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
 }
 console.log(Object.keys(myMeals).map(key => myMeals[key][3]));
+
+//simpler way to do it//
+console.log(myMeals.meals[3]);
