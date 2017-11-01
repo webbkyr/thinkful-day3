@@ -35,36 +35,39 @@
 let peopleArray = [
     person1 = {
         name: 'Ryan',
-        job_title: 'Student'
+        job_title: 'Student',
+        boss: 'Tim'
     },
     person2 = {
         name: 'Kayla',
-        job_title: 'Student'
+        job_title: 'Student',
+        boss: 'Casey'
     },
     person3 = {
         name: 'Bob',
-        job_title: 'finance'
+        job_title: 'finance',
+        boss: 'Angelina'
     }, 
     person4 = {
         name: 'Liz',
-        job_title: 'doctor'
+        job_title: 'doctor',
     }
 ]
 
 console.log(peopleArray[0].name);
 
 for(let i=0; i<peopleArray.length; i++){
-  console.log(`${peopleArray[i].name} ${peopleArray[i].job_title}`);
+    const jobTitle = peopleArray[i].job_title;
+    const name = peopleArray[i].name;
+    const boss = peopleArray[i].boss;
+    if (boss === undefined) {
+        console.log(`${jobTitle} ${name} doesn't report to anybody.`);
+    } else {
+        console.log(`${jobTitle} ${name} reports to ${boss}.`)
+    }
+//   console.log(`${peopleArray[i].name} ${peopleArray[i].job_title}`);
+
 }
-<<<<<<< HEAD
-//
-
-console.log(Object.keys(myMeals).map(key => myMeals[key][3]));
-
-console.log(myMeals.meals[3])
-
-
-=======
 
 // person5 = {
 //     name: 'michael',
@@ -72,4 +75,3 @@ console.log(myMeals.meals[3])
 // }
 
 // console.log(person5.name);
->>>>>>> 5554240ef9d186bee0e65734d907b15d37d243ba
