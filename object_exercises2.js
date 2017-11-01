@@ -32,42 +32,41 @@
 // console.log(myMeals.meals[3]);
 
 
-let peopleArray = [
-    person1 = {
-        name: 'Ryan',
-        job_title: 'Student',
-        boss: 'Tim'
-    },
-    person2 = {
-        name: 'Kayla',
-        job_title: 'Student',
-        boss: 'Casey'
-    },
-    person3 = {
-        name: 'Bob',
-        job_title: 'finance',
-        boss: 'Angelina'
-    }, 
-    person4 = {
-        name: 'Liz',
-        job_title: 'doctor',
-    }
-]
+// let peopleArray = [
+//     person1 = {
+//         name: 'Ryan',
+//         job_title: 'Student',
+//         boss: 'Tim'
+//     },
+//     person2 = {
+//         name: 'Kayla',
+//         job_title: 'Student',
+//         boss: 'Casey'
+//     },
+//     person3 = {
+//         name: 'Bob',
+//         job_title: 'finance',
+//         boss: 'Angelina'
+//     }, 
+//     person4 = {
+//         name: 'Liz',
+//         job_title: 'doctor',
+//     }
+// ]
 
-console.log(peopleArray[0].name);
+// console.log(peopleArray[0].name);
 
-for(let i=0; i<peopleArray.length; i++){
-    const jobTitle = peopleArray[i].job_title;
-    const name = peopleArray[i].name;
-    const boss = peopleArray[i].boss;
-    if (boss === undefined) {
-        console.log(`${jobTitle} ${name} doesn't report to anybody.`);
-    } else {
-        console.log(`${jobTitle} ${name} reports to ${boss}.`)
-    }
+// for(let i=0; i<peopleArray.length; i++){
+//     const jobTitle = peopleArray[i].job_title;
+//     const name = peopleArray[i].name;
+//     const boss = peopleArray[i].boss;
+//     if (boss === undefined) {
+//         console.log(`${jobTitle} ${name} doesn't report to anybody.`);
+//     } else {
+//         console.log(`${jobTitle} ${name} reports to ${boss}.`)
+//     }
 //   console.log(`${peopleArray[i].name} ${peopleArray[i].job_title}`);
-
-}
+// }
 
 // person5 = {
 //     name: 'michael',
@@ -75,3 +74,55 @@ for(let i=0; i<peopleArray.length; i++){
 // }
 
 // console.log(person5.name);
+
+
+// function decode(message){
+//     let arr = message.split(' ');
+//     let result = '';
+//     for(let i=0; i < arr.length; i++){
+//         if(arr[i][0] === 'a'){
+//             result += arr[i][1];
+//         } else if (arr[i][0]=== 'b'){
+//             result += arr[i][2];
+//         } else if (arr[i][0]=== 'c'){
+//             result += arr[i][3];
+//         } else if (arr[i][0]=== 'd'){
+//             result += arr[i][4];
+//         }
+//     }
+//     console.log(result);
+// }
+// decode(message);
+
+const message = 'craft block argon meter bells brown croon droop';
+
+cipherObj = {
+    a: 1,
+    b: 2,
+    c: 3,
+    d: 4
+};
+
+function decodingString(message){
+    let arr = message.split(' ');
+    let result = '';
+
+    for(let i=0; i<arr.length; i++){
+        if(arr[i][0] === 'a'){
+            result += arr[i][cipherObj.a];
+        } else if (arr[i][0]=== 'b'){
+            result += arr[i][cipherObj.b];
+        } else if (arr[i][0]=== 'c'){
+            result += arr[i][cipherObj.c];
+        } else if (arr[i][0]=== 'd'){
+            if(arr[i][cipherObj.d]){
+                result += arr[i][cipherObj.d];
+            }
+        } else {
+            result += '';
+        }
+    }
+    console.log(result);
+}
+decodingString(message);
+
