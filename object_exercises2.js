@@ -14,115 +14,136 @@
 // const obj = {
 //     foo: 'fee',
 //     bar: 'boo',
-//     fum: 'fi',
-//     quux: 'dog',
-//     spam: 'email'
-// }
+// //     fum: 'fi',
+// //     quux: 'dog',
+// //     spam: 'email'
+// // }
 
-// for (key in obj){
-//     console.log(`${key} ${obj[key]}`);
-// }
+// // for (key in obj){
+// //     console.log(`${key} ${obj[key]}`);
+// // }
 
-// const myMeals = {
-//     meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
-// }
-// console.log(Object.keys(myMeals).map(key => myMeals[key][3]));
+// // const myMeals = {
+// //     meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
+// // }
+// // console.log(Object.keys(myMeals).map(key => myMeals[key][3]));
 
-// //simpler way to do it//
-// console.log(myMeals.meals[3]);
-
-
-// let peopleArray = [
-//     person1 = {
-//         name: 'Ryan',
-//         job_title: 'Student',
-//         boss: 'Tim'
-//     },
-//     person2 = {
-//         name: 'Kayla',
-//         job_title: 'Student',
-//         boss: 'Casey'
-//     },
-//     person3 = {
-//         name: 'Bob',
-//         job_title: 'finance',
-//         boss: 'Angelina'
-//     }, 
-//     person4 = {
-//         name: 'Liz',
-//         job_title: 'doctor',
-//     }
-// ]
-
-// console.log(peopleArray[0].name);
-
-// for(let i=0; i<peopleArray.length; i++){
-//     const jobTitle = peopleArray[i].job_title;
-//     const name = peopleArray[i].name;
-//     const boss = peopleArray[i].boss;
-//     if (boss === undefined) {
-//         console.log(`${jobTitle} ${name} doesn't report to anybody.`);
-//     } else {
-//         console.log(`${jobTitle} ${name} reports to ${boss}.`)
-//     }
-//   console.log(`${peopleArray[i].name} ${peopleArray[i].job_title}`);
-// }
-
-// person5 = {
-//     name: 'michael',
-//     job_title: 'programmer'
-// }
-
-// console.log(person5.name);
+// // //simpler way to do it//
+// // console.log(myMeals.meals[3]);
 
 
-// function decode(message){
+// // let peopleArray = [
+// //     person1 = {
+// //         name: 'Ryan',
+// //         job_title: 'Student',
+// //         boss: 'Tim'
+// //     },
+// //     person2 = {
+// //         name: 'Kayla',
+// //         job_title: 'Student',
+// //         boss: 'Casey'
+// //     },
+// //     person3 = {
+// //         name: 'Bob',
+// //         job_title: 'finance',
+// //         boss: 'Angelina'
+// //     }, 
+// //     person4 = {
+// //         name: 'Liz',
+// //         job_title: 'doctor',
+// //     }
+// // ]
+
+// // console.log(peopleArray[0].name);
+
+// // for(let i=0; i<peopleArray.length; i++){
+// //     const jobTitle = peopleArray[i].job_title;
+// //     const name = peopleArray[i].name;
+// //     const boss = peopleArray[i].boss;
+// //     if (boss === undefined) {
+// //         console.log(`${jobTitle} ${name} doesn't report to anybody.`);
+// //     } else {
+// //         console.log(`${jobTitle} ${name} reports to ${boss}.`)
+// //     }
+// //   console.log(`${peopleArray[i].name} ${peopleArray[i].job_title}`);
+// // }
+
+// // person5 = {
+// //     name: 'michael',
+// //     job_title: 'programmer'
+// // }
+
+// // console.log(person5.name);
+
+
+// // function decode(message){
+// //     let arr = message.split(' ');
+// //     let result = '';
+// //     for(let i=0; i < arr.length; i++){
+// //         if(arr[i][0] === 'a'){
+// //             result += arr[i][1];
+// //         } else if (arr[i][0]=== 'b'){
+// //             result += arr[i][2];
+// //         } else if (arr[i][0]=== 'c'){
+// //             result += arr[i][3];
+// //         } else if (arr[i][0]=== 'd'){
+// //             result += arr[i][4];
+// //         }
+// //     }
+// //     console.log(result);
+// // }
+// // decode(message);
+
+// const message = 'craft block argon meter bells brown croon droop';
+
+// cipherObj = {
+//     a: 1,
+//     b: 2,
+//     c: 3,
+//     d: 4
+// };
+
+// function decodingString(message){
 //     let arr = message.split(' ');
 //     let result = '';
-//     for(let i=0; i < arr.length; i++){
+
+//     for(let i=0; i<arr.length; i++){
 //         if(arr[i][0] === 'a'){
-//             result += arr[i][1];
+//             result += arr[i][cipherObj.a];
 //         } else if (arr[i][0]=== 'b'){
-//             result += arr[i][2];
+//             result += arr[i][cipherObj.b];
 //         } else if (arr[i][0]=== 'c'){
-//             result += arr[i][3];
+//             result += arr[i][cipherObj.c];
 //         } else if (arr[i][0]=== 'd'){
-//             result += arr[i][4];
+//             if(arr[i][cipherObj.d]){
+//                 result += arr[i][cipherObj.d];
+//             }
+//         } else {
+//             result += '';
 //         }
 //     }
 //     console.log(result);
 // }
-// decode(message);
+// decodingString(message);
 
-const message = 'craft block argon meter bells brown croon droop';
-
-cipherObj = {
-    a: 1,
-    b: 2,
-    c: 3,
-    d: 4
-};
-
-function decodingString(message){
-    let arr = message.split(' ');
-    let result = '';
-
-    for(let i=0; i<arr.length; i++){
-        if(arr[i][0] === 'a'){
-            result += arr[i][cipherObj.a];
-        } else if (arr[i][0]=== 'b'){
-            result += arr[i][cipherObj.b];
-        } else if (arr[i][0]=== 'c'){
-            result += arr[i][cipherObj.c];
-        } else if (arr[i][0]=== 'd'){
-            if(arr[i][cipherObj.d]){
-                result += arr[i][cipherObj.d];
+function createCharacter(name, nickname, race, origin, attack, defense) {
+    // const validType = ['Gandalf the White', 'Biblo Baggins', 'Frodo Baggins', 'Aragorn son of Arathron', 'Legolas'];
+    return {
+        name, nickname, race, origin, attack, defense,
+        describe: function() {
+            console.log(`${this.name} is a ${this.race} from ${this.origin}.`);
+        },
+        evaluateFight: function(character) {
+            let x = this.attack;
+            let y = this.defense;
+            if (y > x) {
+                return `Your opponent takes ${x} and you recieve zero damage.`;
+            } else {
+                return `Your opponent takes ${x} and you recieve ${y} damage.`;
             }
-        } else {
-            result += '';
-        }
+        }        
     }
-    console.log(result);
 }
-decodingString(message);
 
+const characters = createCharacter('Legolas','legolas', 'Elf', 'Woodland realm', 8, 5);
+console.log(characters.describe());
