@@ -56,10 +56,5 @@ console.log(peopleArray[0].name);
 for(let i=0; i<peopleArray.length; i++){
   console.log(`${peopleArray[i].name} ${peopleArray[i].job_title}`);
 }
-//
-
-console.log(Object.keys(myMeals).map(key => myMeals[key][3]));
-
-console.log(myMeals.meals[3])
 
 
