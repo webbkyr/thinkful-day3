@@ -126,12 +126,13 @@
 // }
 // decodingString(message);
 
+
 function createCharacter(name, nickname, race, origin, attack, defense) {
     // const validType = ['Gandalf the White', 'Biblo Baggins', 'Frodo Baggins', 'Aragorn son of Arathron', 'Legolas'];
     return {
         name, nickname, race, origin, attack, defense,
         describe: function() {
-            console.log(`${this.name} is a ${this.race} from ${this.origin}.`);
+            return `${this.name} is a ${this.race} from ${this.origin}.`;
         },
         evaluateFight: function(character) {
             let x = this.attack;
@@ -145,5 +146,23 @@ function createCharacter(name, nickname, race, origin, attack, defense) {
     }
 }
 
-const characters = createCharacter('Legolas','legolas', 'Elf', 'Woodland realm', 8, 5);
-console.log(characters.describe());
+// const character = createCharacter('Legolas','legolas', 'Elf', 'Woodland realm', 8, 5);
+// console.log(character.describe());
+
+const Arwen = createCharacter('Arwen Undomiel','arwen','Half-Elf','RivenDell', 5, 7);
+// console.log(Arwen.describe());
+
+const characterArray = [
+    gandolf = createCharacter('Gandalf the White','gandalf','Wizard','Middle Earth', 10, 6),
+    bilbo = createCharacter('Bilbo Baggins','bilbo','Hobbit','The Shire', 2, 1),
+    frodo = createCharacter('Frodo Baggins','frodo','Hobbit','The Shire', 3, 2),
+    aragorn = createCharacter('Aragorn son of Arathorn','aragorn','Man','Dunnedain', 6, 8),
+    legolas = createCharacter('Legolas','legolas','Elf','Woodland Realm', 8, 5) 
+];
+
+
+characterArray.find(function(characterArray){
+    if(characterArray.nickname === 'aragorn'){
+        console.log(aragorn.describe());
+    }
+});
