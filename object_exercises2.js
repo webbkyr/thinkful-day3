@@ -127,12 +127,12 @@
 // decodingString(message);
 
 
-function createCharacter(name, nickname, race, origin, attack, defense) {
+function createCharacter(name, nickname, race, origin, attack, defense, weapon) {
     // const validType = ['Gandalf the White', 'Biblo Baggins', 'Frodo Baggins', 'Aragorn son of Arathron', 'Legolas'];
     return {
-        name, nickname, race, origin, attack, defense,
+        name, nickname, race, origin, attack, defense, weapon,
         describe: function() {
-            return `${this.name} is a ${this.race} from ${this.origin}.`;
+            return `${this.name} is a ${this.race} from ${this.origin} who uses the ${weapon}.`;
         },
         evaluateFight: function(character) {
             let x = this.attack;
@@ -149,23 +149,23 @@ function createCharacter(name, nickname, race, origin, attack, defense) {
 // const character = createCharacter('Legolas','legolas', 'Elf', 'Woodland realm', 8, 5);
 // console.log(character.describe());
 
-const Arwen = createCharacter('Arwen Undomiel','arwen','Half-Elf','RivenDell', 5, 7);
+const Arwen = createCharacter('Arwen Undomiel','arwen','Half-Elf','RivenDell', 5, 7, 'Hadhafang');
 // console.log(Arwen.describe());
 
 const characterArray = [
-    gandolf = createCharacter('Gandalf the White','gandalf','Wizard','Middle Earth', 10, 6),
-    bilbo = createCharacter('Bilbo Baggins','bilbo','Hobbit','The Shire', 2, 1),
-    frodo = createCharacter('Frodo Baggins','frodo','Hobbit','The Shire', 3, 2),
-    aragorn = createCharacter('Aragorn son of Arathorn','aragorn','Man','Dunnedain', 6, 8),
-    legolas = createCharacter('Legolas','legolas','Elf','Woodland Realm', 8, 5) 
+    gandolf = createCharacter('Gandalf the White','gandalf','Wizard','Middle Earth', 10, 6, 'wizard staff'),
+    bilbo = createCharacter('Bilbo Baggins','bilbo','Hobbit','The Shire', 2, 1, 'Ring'),
+    frodo = createCharacter('Frodo Baggins','frodo','Hobbit','The Shire', 3, 2, 'String and Barrow Blade'),
+    aragorn = createCharacter('Aragorn son of Arathorn','aragorn','Man','Dunnedain', 6, 8, 'Anduril'),
+    legolas = createCharacter('Legolas','legolas','Elf','Woodland Realm', 8, 5, 'Bow and Arrow') 
 ];
 
 
-// characterArray.find(function(characterArray){
-//     if(characterArray.nickname === 'aragorn'){
-//         console.log(aragorn.describe());
-//     }
-// });
+characterArray.find(function(characterArray){
+    if(characterArray.nickname === 'aragorn'){
+        console.log(aragorn.describe());
+    }
+});
 
 //Using the .filter() function, create a new array from characters that ONLY contains characters of the race Hobbit.//
 
